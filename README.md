@@ -1,27 +1,40 @@
 # Crowdfund
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+#### A crowdfunding application
 
-## Development server
+#### By **Ami**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
+A reimagining of a crowdfunding site with the following features:
+  * The ability to see a list of all projects/ideas/charities.
+  * The ability to click on a project and see additional details about it.
+  * The ability to filter through projects based on certain project criteria such as funding remaining, if the project is a charity or a product prototype, etc.
+  * The ability to 'fund' a project by clicking a button and filling out a payment form.
+  * The ability to post the user's own project idea for funding.
+  * As an administrator, the ability to add, update, or delete projects.
+  * each project has its own page.
+  * Being able to select a category
 
-## Code scaffolding
+## Setup/Installation Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone from GitHub repository [https://github.com/amiraine/crowdfund.git/]
+2. Run `install -g @angular/cli@1.6.5`
+3. Run `brew upgrade node`
+4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Build
+## Known Bugs
+* No known bugs at this time.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Technologies Used
+  * Angular 6.0
+  * Bootstrap 4.0
 
-## Running unit tests
+## Support and contact details
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+_Email the authors with any questions, comments, or concerns._
 
-## Running end-to-end tests
+### License
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+*{This software is licensed under the MIT license}*
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2018 **_{Ami}_**
