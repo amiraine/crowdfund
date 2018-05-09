@@ -25,4 +25,8 @@ export class ProjectsComponent implements OnInit {
       return "bg-lightcoral"
     }
   }
+  filterByType: string = "allProjects";
+  onChange(optionFromMenu) {
+    this.filterByType = optionFromMenu;
+  }
 }

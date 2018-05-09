@@ -7,13 +7,50 @@ import { Fundraiser } from './fundraiser.model';
 })
 
 export class TypePipe implements PipeTransform {
-  transform(input: Fundraiser[]){
+  transform(input: Fundraiser[],fundType){
     var output: Fundraiser[] = [];
-    for (var i = 0; i <input.length; i++){
-      if (input[i].type === "charity"){
-        output.push(input[i])
+    if(fundType === "allProjects"){
+      for(var i = 0; i <input.length; i++){
+        if(input[i].type != ""){
+          output.push(input[i]);
+        }
       }
+      return output;
+    } else if (fundType === "charity"){
+      for(var i = 0; i < input.length; i++){
+        if(input[i].type ==="charity"){
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (fundType === "product"){
+      for(var i = 0; i < input.length; i++){
+        if(input[i].type ==="product"){
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (fundType === "animals"){
+      for(var i = 0; i <input.length; i++){
+        if(input[i].genre === "animals"){
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (fundType === "community"){
+      for(var i = 0; i < input.length; i++){
+        if(input[i].genre === "community"){
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (fundType === "technology"){
+      for(var i = 0; i < input.length; i++){
+        if(input[i].genre === "technology"){
+          output.push(input[i])''
+        }
+      }
+      return output;
     }
-    return output;
   }
 }

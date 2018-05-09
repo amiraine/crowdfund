@@ -2,7 +2,19 @@
   <div class="current-banner">
     <h1>Current Fundraisers</h1>
   </div>
-  <div class="project-list" *ngFor="let project of fundraisers | type">
+  <div class="filters">
+    <select class="form-control" (change)="onChange($event.target.value)">
+      <option disabled>--- By fundraiser type ---</option>
+      <option value="allProjects" selected="selected">All fundraisers</option>
+      <option value="charity">Charitable fundraisers</option>
+      <option value="product">Product fundraisers</option>
+      <option disabled>--- By fundraiser category ---</option>
+      <option value="animals">Animals</option>
+      <option value="community">Community</option>
+      <option value="technology">Technology</option>
+    </select>
+  </div>
+  <div class="project-list" *ngFor="let project of fundraisers | type:filterByType">
     <div class="project-title row">
       <div class="col-sm-8">
         <h2>{{project.title}}</h2>
