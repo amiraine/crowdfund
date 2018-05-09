@@ -15,14 +15,12 @@ A reimagining of a crowdfunding site with the following features:
   * each project has its own page.
   * Being able to select a category
 
-## Dev notes
+## Dev notes - Checklist for next time:
   * create more fundraisers
-  * hide project descriptions under an onclick function
-  * add pipe for fundraiser type (product or charity)
-  * add pipe for other categories (animals, technology, some other stuff)
   * firebase
   * create form for user to add their own fundraiser
-  * dynamic routing for some of the fundraisers?
+  * dynamic routing for some of the fundraisers
+  * services/dependency injection
 
 ## Setup/Installation Requirements
 
