@@ -5,17 +5,21 @@
     <title>CashGrab</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" routerLink="">CashGrab</a>
         </div>
-        <a class="nav-link" routerLink="about">About Us</a>
-        <a class="nav-link" routerLink="projects">Current Fundraisers</a>
+        <div class="navbar-nav-scroll">
+          <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li><a class="nav-item" routerLink="about">About Us</a></li>
+            <li><a class="nav-item" routerLink="projects">Current Fundraisers</a></li>
+            <li><a class="nav-item" routerLink="newform">Create your own Fundraiser</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <div class="container">
-      <h1>CashGrab</h1>
+    <div class="container-fluid">
       <router-outlet></router-outlet>
     </div>
   </body>
