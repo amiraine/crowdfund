@@ -2,13 +2,13 @@
   <div class="current-banner">
     <h1>Current Fundraisers</h1>
   </div>
-  <div class="project-list" *ngFor="let project of fundraisers">
+  <div class="project-list" *ngFor="let project of fundraisers | type">
     <div class="project-title row">
       <div class="col-sm-8">
         <h2>{{project.title}}</h2>
       </div>
       <div class="col-sm-4">
-        ${{project.current}}/${{project.goal}} raised!
+        <p [class]="fundingProgress(project)">${{project.current}}/${{project.goal}} raised!</p>
       </div>
     </div>
     <div class="project-body">

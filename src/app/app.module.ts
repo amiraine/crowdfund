@@ -10,6 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 
 import { routing } from './app.routing';
 import { NewformComponent } from './newform/newform.component';
+import { TypePipe } from './type.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NewformComponent } from './newform/newform.component';
     HomeComponent,
     AboutComponent,
     ProjectsComponent,
-    NewformComponent
+    NewformComponent,
+    TypePipe
   ],
   imports: [
     BrowserModule,
