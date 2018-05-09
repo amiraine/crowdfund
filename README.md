@@ -15,6 +15,16 @@ A reimagining of a crowdfunding site with the following features:
   * each project has its own page.
   * Being able to select a category
 
+## Dev notes
+  * add conditional color-coding for different ratios of current funds/goal funds.
+  * create more fundraisers
+  * hide project descriptions under an onclick function
+  * add pipe for fundraiser type (product or charity)
+  * add pipe for other categories (animals, technology, some other stuff)
+  * firebase
+  * create form for user to add their own fundraiser
+  * dynamic routing for some of the fundraisers?
+
 ## Setup/Installation Requirements
 
 1. Clone from GitHub repository [https://github.com/amiraine/crowdfund.git/]
