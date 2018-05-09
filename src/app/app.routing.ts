@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import {NewformComponent} from './newform/newform.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'newform',
     component: NewformComponent
+  },
+  {
+    path: 'projects:id',
+    component: ProjectDetailComponent
   }
 ];
 

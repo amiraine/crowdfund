@@ -11,6 +11,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { routing } from './app.routing';
 import { NewformComponent } from './newform/newform.component';
 import { TypePipe } from './type.pipe';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TypePipe } from './type.pipe';
     AboutComponent,
     ProjectsComponent,
     NewformComponent,
-    TypePipe
+    TypePipe,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
