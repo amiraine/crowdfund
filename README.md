@@ -16,7 +16,6 @@ A reimagining of a crowdfunding site with the following features:
   * Being able to select a category
 
 ## Dev notes
-  * add conditional color-coding for different ratios of current funds/goal funds.
   * create more fundraisers
   * hide project descriptions under an onclick function
   * add pipe for fundraiser type (product or charity)

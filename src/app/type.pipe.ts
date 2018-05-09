@@ -47,7 +47,7 @@ export class TypePipe implements PipeTransform {
     } else if (fundType === "technology"){
       for(var i = 0; i < input.length; i++){
         if(input[i].genre === "technology"){
-          output.push(input[i])''
+          output.push(input[i]);
         }
       }
       return output;
