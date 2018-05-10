@@ -3,15 +3,17 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Fundraiser } from '../fundraiser.model';
 import { ProjectService } from '../project.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-project-detail',
   templateUrl: './project-detail.component.html',
-  styleUrls: ['./project-detail.component.css']
+  styleUrls: ['./project-detail.component.css'],
+  providers: [ProjectService]
 })
 export class ProjectDetailComponent implements OnInit {
-  projectId: number;
-  projectToDisplay: Fundraiser;
+  projectId: string;
+  projectToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,7 +22,7 @@ export class ProjectDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters)=>{
-      this.projectId = parseInt(urlParameters['id']);
+      this.projectId = urlParameters['id'];
     });
     this.projectToDisplay = this.projectService.getProjectById(this.projectId);
   }

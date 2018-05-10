@@ -13,29 +13,29 @@
         <div class="form-row">
           <div class="col">
             <label for="fundName">Fundraiser title</label>
-            <input type="text" class="form-control" id="fundName" placeholder="Enter title" required>
+            <input type="text" class="form-control" #titleInput placeholder="Enter title" required>
           </div>
         </div>
         <p><label for="description">Project description</label>
-        <textarea class="form-control" name="description" id="description" rows="8" cols="120" placeholder="Enter a description of your fundraising campaign" required></textarea>
+        <textarea class="form-control" name="description" #descriptionInput rows="8" cols="120" placeholder="Enter a description of your fundraising campaign" required></textarea>
         <label for="goal">Funding Goal</label>
-        <input class="form-control" type="number" id="goal" placeholder="Enter your fundraising goal" required>
+        <input class="form-control" type="number" #goalInput placeholder="Enter your fundraising goal" required>
         <div class="form-row">
           <div class="col">
-            <select class="form-control" id="typeInput">
+            <select class="form-control" #typeInput>
               <option value="charity">Charity</option>
               <option value="product">Product</option>
             </select>
           </div>
           <div class="col">
-            <select class="form-control" id="genreInput">
+            <select class="form-control" #genreInput>
               <option value="animals">Animals</option>
               <option value="community">Community</option>
               <option value="technology">Technology</option>
             </select>
           </div>
         </div>
-        <button type="submit">Submit</button>
+        <button class="btn btn-info" (click)="submitForm(titleInput.value,descriptionInput.value,goalInput.value,typeInput.value,genreInput.value)">Submit</button>
       </form>
     </div>
   </div>

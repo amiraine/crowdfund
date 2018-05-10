@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Fundraiser } from '../fundraiser.model';
 import { Router } from '@angular/router';
 import {ProjectService} from '../project.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +11,9 @@ import {ProjectService} from '../project.service';
   providers: [ProjectService]
 })
 export class ProjectsComponent implements OnInit {
-  fundraisers: Fundraiser[];
+
+  fundraisers: FirebaseListObservable<any[]>;
+
   constructor(private router: Router, private projectService: ProjectService) { }
 
   ngOnInit() {
@@ -32,7 +35,7 @@ export class ProjectsComponent implements OnInit {
     this.filterByType = optionFromMenu;
   }
 
-  goToDetails(clickedProject: Fundraiser) {
-    this.router.navigate(['projects', clickedProject.id])
+  goToDetails(clickedProject) {
+    this.router.navigate(['projects', clickedProject.$key])
   }
 }

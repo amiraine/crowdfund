@@ -1,8 +1,14 @@
 <div class="card">
-  <div class="card-header">
-    <h1>{{projectToDisplay.title}}</h1>
+  <div class="card-header row">
+    <div class="col-auto">
+      <h1>{{(projectToDisplay | async)?.title}}</h1>
+    </div>
+    <div class="col-auto">
+      ${{(projectToDisplay | async)?.current}}/${{(projectToDisplay | async)?.goal}}
+    </div>
   </div>
   <div class="card-body">
-    {{projectToDisplay.description}}
+    {{(projectToDisplay | async)?.description}}
+    <p><button type="button" class="btn btn-info">Fund This!</button>
   </div>
 </div>

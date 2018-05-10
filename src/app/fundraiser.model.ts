@@ -4,6 +4,5 @@ export class Fundraiser {
     public goal: number,
     public current: number,
     public type: string,
-    public genre: string,
-    public id: number){ }
+    public genre: string) {}
 }
