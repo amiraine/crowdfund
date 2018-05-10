@@ -14,7 +14,7 @@
       <option value="technology">Technology</option>
     </select>
   </div>
-  <div class="project-list" *ngFor="let project of fundraisers | type:filterByType">
+  <div class="project-list" *ngFor="let project of fundraisers | type:filterByType" (click)="goToDetails(project)">
     <div class="project-title row">
       <div class="col-sm-8">
         <h2>{{project.title}}</h2>
